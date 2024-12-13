@@ -468,6 +468,11 @@ chmod 777 lkp.sh
 '
 echo "Creating a service to run lkp"
 
+
+#copying the lkp script to /var/lib/lkp-automation-data
+rm /var/lib/lkp-automation-data/lkp.sh
+touch /var/lib/lkp-automation-data/
+sudo cp $loc/lkp-tests/lkp.sh /var/lib/lkp-automation-data/lkp.sh
 cd /etc/systemd/system/
 touch lkp.service
 truncate -s 0 lkp.service
