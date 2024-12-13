@@ -28,7 +28,7 @@ else
   if [ "$user" == "amd" ]; then
 	  echo 'Amd$1234!' |  sudo -S $loc/centos-lkp-automation.sh $user
   else
-	  sudo $loc/centos-lkp-automation.sh $user
+	  sudo $loc/centos-lkp-automation.sh $user "no"
   fi
 fi
 
